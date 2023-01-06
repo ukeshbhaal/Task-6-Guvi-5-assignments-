@@ -26,14 +26,19 @@ Doors: number of doors
 Cruise: indicator variable representing whether the car has cruise control (1 = cruise)
 Sound: indicator variable representing whether the car has upgraded speakers (1 = upgraded)
 Leather: indicator variable representing whether the car has leather seats (1 = leather)
+
+
 Tasks, Part 1
 Find the linear regression equation for mileage vs price.
 Chart the original data and the equation on the chart.
 Find the equation's R2 score (use the .score method) to determine whether the equation is a good fit for this data. (0.8 and greater is considered a strong correlation.)
+
 Tasks, Part 2
 Use mileage, cylinders, liters, doors, cruise, sound, and leather to find the linear regression equation.
 Find the equation's R2 score (use the .score method) to determine whether the equation is a good fit for this data. (0.8 and greater is considered a strong correlation.)
 Find the combination of the factors that is the best predictor for price.
+
+
 Tasks, Hard Mode
 Research dummy variables in scikit-learn to see how to use the make, model, and body type.
 Find the best combination of factors to predict price.
@@ -45,10 +50,15 @@ df = pd.read_csv("car_data.csv")
 ----------------------------------------------------------------------------------------------------------------------
 
 Assignment5
+
 Ground Cricket Chirps
+
 In The Song of Insects (1948) by George W. Pierce, Pierce mechanically measured the frequency (the number of wing vibrations per second) of chirps (or pulses of sound) made by a striped ground cricket, at various ground temperatures. Since crickets are ectotherms (cold-blooded), the rate of their physiological processes and their overall metabolism are influenced by temperature. Consequently, there is reason to believe that temperature would have a profound effect on aspects of their behavior, such as chirp frequency.
 
+
+
 In general, it was found that crickets did not sing at temperatures colder than 60º F. or warmer than 100º F.
+
 
 [ ]
 ground_cricket_data = {"Chirps/Second": [20.0, 16.0, 19.8, 18.4, 17.1, 15.5, 14.7,
@@ -58,12 +68,20 @@ ground_cricket_data = {"Chirps/Second": [20.0, 16.0, 19.8, 18.4, 17.1, 15.5, 14.
                                               71.6, 69.4, 83.3, 79.6, 82.6, 80.6, 83.5,
                                               76.3]}
 df = pd.DataFrame(ground_cricket_data)
+
+
 Tasks
 Find the linear regression equation for this data.
+
 Chart the original data and the equation on the chart.
+
 Find the equation's R2 score (use the .score method) to determine whether the equation is a good fit for this data. (0.8 and greater is considered a strong correlation.)
+
 Extrapolate data: If the ground temperature reached 95, then at what approximate rate would you expect the crickets to be chirping?
 Interpolate data: With a listening device, you discovered that on a particular morning the crickets were chirping at a rate of 18 chirps per second. What was the approximate ground temperature that morning?
+
+
+
 Assignment6
 Brain vs. Body Weight
 In the file brain_body.txt, the average brain and body weight for a number of mammal species are recorded. Load this data into a Pandas data frame.
@@ -72,11 +90,15 @@ Tasks
 Find the linear regression equation for this data for brain weight to body weight.
 Chart the original data and the equation on the chart.
 Find the equation's R2 score (use the .score method) to determine whether the equation is a good fit for this data. (0.8 and greater is considered a strong correlation.)
+
+
 [ ]
 df = pd.read_fwf("brain_body.txt")
 Assignment7
 Salary Discrimination
 The file salary.txt contains data for 52 tenure-track professors at a small Midwestern college. This data was used in legal proceedings in the 1980s about discrimination against women in salary.
+
+
 
 The data in the file, by column:
 
@@ -86,6 +108,8 @@ Year. Number of years in current rank.
 Degree. Highest degree. 1 for doctorate, 0 for master's.
 YSdeg. Years since highest degree was earned.
 Salary. Salary/year in dollars.
+
+
 Tasks
 Find the linear regression equation for this data using columns 1-5 to column 6.
 Find the selection of columns with the best  R2  score.
@@ -96,9 +120,12 @@ Report whether sex is a factor in salary.
  
 Boston Housing Dataset
 Predicting Median value of owner-occupied homes
+
 The aim of this assignment is to learn the application of machine learning algorithms to data sets. This involves learning what data means, how to handle data, training, cross validation, prediction, testing your model, etc.
 This dataset contains information collected by the U.S Census Service concerning housing in the area of Boston Mass. It was obtained from the StatLib archive, and has been used extensively throughout the literature to benchmark algorithms. The data was originally published by Harrison, D. and Rubinfeld, D.L. Hedonic prices and the demand for clean air', J. Environ. Economics & Management, vol.5, 81-102, 1978.
 The dataset is small in size with only 506 cases. It can be used to predict the median value of a home, which is done here. There are 14 attributes in each case of the dataset. They are:
+
+
 CRIM - per capita crime rate by town
 ZN - proportion of residential land zoned for lots over 25,000 sq.ft.
 INDUS - proportion of non-retail business acres per town.
@@ -113,8 +140,10 @@ PTRATIO - pupil-teacher ratio by town
 B - 1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town
 LSTAT - % lower status of the population
 MEDV - Median value of owner-occupied homes in $1000's
+
  
 Aim
+
 To implement a linear regression with regularization via gradient descent.
 to implement gradient descent with Lp norm, for 3 different values of p in (1,2]
 To contrast the difference between performance of linear regression Lp norm and L2 norm for these 3 different values.
@@ -137,8 +166,10 @@ Repeat steps until error between consecutive ws is less than threshold
 Load values of id from test data file
 Calculate y for test data using phi test and applying inverse log
 Save the ids and y according to filename from dictionary
+
  
 Feature Engineering
+
 Columns of phi are not in same range, this is because their units are different i.e phi is ill conditioned
 So, min max scaling for each column is applied to bring them in range 0-1
 Same scaling would be required on columns of phi test
